@@ -1,0 +1,159 @@
+.header {
+    padding: 30px 0px;
+    margin-bottom: 40px;
+  
+    @media (max-width: 870px) {
+      margin-bottom: 10px;
+      padding: 10px 0px;
+    }
+    .header__container {
+      padding: 0px 15px;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        width: 184px;
+        height: 60px;
+  
+        .logo__title {
+          width: 184px;
+          margin-bottom: 10px;
+          font-size: 32px;
+          line-height: 35.2px;
+          letter-spacing: 6%;
+          font-weight: 400;
+          color: #f1cdb3;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        .logo__discription {
+          width: 179px;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #ffffff;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 15px;
+          letter-spacing: 10%;
+        }
+      }
+      .link {
+        display: flex;
+        align-items: center;
+        .header__link {
+          width: 443px;
+          color: #ffffff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @media (max-width: 870px) {
+            width: 200px;
+            height: 300px;
+            margin: 0px 30px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: -1000%;
+            left: -1000%;
+          }
+          &.active {
+            @media (max-width: 870px) {
+              width: 200px;
+              height: 400px;
+              background-color: #554d4d;
+              margin: 0px 30px;
+              position: absolute;
+              top: 12%;
+              left: 70%;
+            }
+            @media (max-width: 660px) {
+              width: 400px;
+              height: 400px;
+              margin: 0px 30px;
+              position: absolute;
+              top: 12%;
+              left: 25%;
+              background-color: #554d4d;
+            }
+            @media (max-width: 574px) {
+              width: 400px;
+              height: 400px;
+              margin: 0px 30px;
+              position: absolute;
+              top: 10%;
+              left: -10%;
+              background-color: #554d4d;
+            }
+            @media (max-width: 321px) {
+              width: 320px;
+              height: 400px;
+              margin: 0px 30px;
+              position: absolute;
+              top: 10%;
+              left: -10%;
+              background-color: #554d4d;
+            }
+          }
+          .header__link__item {
+            margin: 0 10px;
+            color: #ffffff;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+              border-bottom: 2px solid #f1cdb3;
+            }
+          }
+        }
+      }
+      .burger {
+        display: none;
+        @media (max-width: 870px) {
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-color: transparent;
+          .burger__menu {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            & span,
+            & span::before,
+            & span::after {
+              position: absolute;
+              top: 50%;
+              margin-top: -1px;
+              left: 50%;
+              margin-left: -10px;
+              display: block;
+              width: 20px;
+              height: 2px;
+              background-color: #f8f5f5;
+            }
+            & span::before,
+            & span::after {
+              content: "";
+              transition: 0.5s;
+            }
+            & span::after {
+              transform: translateY(5px);
+            }
+            & span::before {
+              transform: translateY(-5px);
+            }
+  
+            &.active span {
+              height: 0;
+            }
+            &.active span::before {
+              transform: rotate(45deg);
+            }
+            &.active span::after {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  
